@@ -1,0 +1,105 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3148,         97]
+NotebookOptionsPosition[      2847,         84]
+NotebookOutlinePosition[      3195,         99]
+CellTagsIndexPosition[      3152,         96]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Generate", " ", "random", " ", "3", "x4", " ", "matrix", " ", "of", " ", 
+     "floats", " ", "y"}], ",", 
+    RowBox[{"3", "x1", " ", "vector", " ", "of", " ", "ints", " ", "d"}]}], 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", 
+   RowBox[{"RandomReal", "[", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{"RandomInteger", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "1"}], "}"}]}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Set", " ", "number", " ", "precision"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"y", "=", 
+    RowBox[{"SetAccuracy", "[", 
+     RowBox[{"y", ",", "6"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Overwrite", " ", "csv", " ", "file"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{
+    RowBox[{"FileNameJoin", "[", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<output.csv\>\""}], 
+      "}"}], "]"}], ",", 
+    RowBox[{"ArrayFlatten", "[", 
+     RowBox[{"{", 
+      RowBox[{"{", 
+       RowBox[{"y", ",", "d"}], "}"}], "}"}], "]"}], ",", "\"\<CSV\>\""}], 
+   "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.724521322559016*^9, 3.7245214025013266`*^9}, {
+   3.7245214387597666`*^9, 3.7245214605559273`*^9}, {3.724521552830469*^9, 
+   3.7245216741110497`*^9}, {3.7395787698288527`*^9, 3.739578882322693*^9}, {
+   3.739579050603292*^9, 3.7395790691553745`*^9}, {3.7395791000863233`*^9, 
+   3.7395792863366013`*^9}, 3.739579432495593*^9, {3.739579540730231*^9, 
+   3.7395795410702233`*^9}, {3.739579996211075*^9, 3.7395801209128838`*^9}, {
+   3.739580237538497*^9, 
+   3.739580271945362*^9}},ExpressionUUID->"308f38a8-df03-4ec9-bfd3-\
+67368038deed"]
+},
+WindowSize->{759, 830},
+WindowMargins->{{242, Automatic}, {21, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2285, 62, 252, "Input",ExpressionUUID->"308f38a8-df03-4ec9-bfd3-67368038deed"]
+}
+]
+*)
+

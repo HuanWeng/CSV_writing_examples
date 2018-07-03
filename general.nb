@@ -1,0 +1,154 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5657,        146]
+NotebookOptionsPosition[      5354,        133]
+NotebookOutlinePosition[      5703,        148]
+CellTagsIndexPosition[      5660,        145]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ClearAll", "[", "\"\<Global`*\>\"", "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{
+    "Generate", " ", "random", " ", "3", "x4", " ", "matrix", " ", "of", " ", 
+     "floats", " ", "y"}], ",", 
+    RowBox[{"3", "x1", " ", "vector", " ", "of", " ", "ints", " ", "d"}]}], 
+   " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"y", "=", 
+   RowBox[{"RandomReal", "[", 
+    RowBox[{"1", ",", 
+     RowBox[{"{", 
+      RowBox[{"3", ",", "4"}], "}"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"d", "=", 
+    RowBox[{"RandomInteger", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "100"}], ",", "100"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"3", ",", "1"}], "}"}]}], "]"}]}], ";"}], "\n", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Open", " ", "a", " ", "file", " ", "for", " ", "output"}], " ", 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "Overwrite", " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"f", "=", 
+    RowBox[{"OpenWrite", "[", 
+     RowBox[{"FileNameJoin", "[", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<output.csv\>\""}], 
+       "}"}], "]"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", "Append", " ", "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"f", "=", 
+     RowBox[{"OpenAppend", "[", 
+      RowBox[{"FileNameJoin", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"NotebookDirectory", "[", "]"}], ",", "\"\<output.csv\>\""}],
+         "}"}], "]"}], "]"}]}], ";"}], " ", "*)"}], "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+   "For", " ", "loop", " ", "running", " ", "3", " ", "times", " ", "to", " ",
+     "print", " ", "each", " ", "csv", " ", "row"}], " ", 
+   "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{"WriteString", "[", 
+      RowBox[{"f", ",", 
+       RowBox[{"ExportString", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Flatten", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"SetAccuracy", "[", 
+              RowBox[{
+               RowBox[{"y", "[", 
+                RowBox[{"[", 
+                 RowBox[{"i", ",", ";;"}], "]"}], "]"}], ",", "6"}], "]"}], 
+             ",", 
+             RowBox[{"d", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "}"}], "]"}], "}"}], ",", 
+         "\"\<CSV\>\""}], "]"}]}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", 
+       RowBox[{"Length", "[", "d", "]"}]}], "}"}]}], "]"}], ";"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{"Close", " ", "file"}], " ", "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Close", "[", "f", "]"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.7395008559909244`*^9, 3.7395008560289865`*^9}, {
+   3.7395009667533646`*^9, 3.7395011532892237`*^9}, {3.739501215309696*^9, 
+   3.739501245576124*^9}, {3.739501294378337*^9, 3.7395013038589163`*^9}, {
+   3.7395033163164053`*^9, 3.7395033787786646`*^9}, {3.739503552420785*^9, 
+   3.7395036189410324`*^9}, {3.7395036532288575`*^9, 
+   3.7395036934448967`*^9}, {3.7395037687623453`*^9, 3.7395037854097366`*^9}, 
+   3.7395038324780273`*^9, {3.7395041421975107`*^9, 3.7395041542947197`*^9}, {
+   3.7395041902619734`*^9, 3.7395041903961897`*^9}, {3.7395042426590805`*^9, 
+   3.739504284201788*^9}, {3.7395045612730217`*^9, 3.7395045668155622`*^9}, 
+   3.7395046071049623`*^9, {3.7395055760312223`*^9, 3.7395056100316563`*^9}, {
+   3.739505642682003*^9, 3.7395056499944954`*^9}, {3.7395056973150625`*^9, 
+   3.7395057020664434`*^9}, {3.7395058225514646`*^9, 
+   3.7395058529108515`*^9}, {3.739505891921197*^9, 3.739505892323643*^9}, {
+   3.7395059622976246`*^9, 3.7395059670625186`*^9}, {3.7395059997012987`*^9, 
+   3.7395060138239193`*^9}, {3.7395060514080877`*^9, 3.739506065768751*^9}, {
+   3.739506394605723*^9, 3.739506397464079*^9}, 3.7395064351763725`*^9, {
+   3.7395064764225035`*^9, 3.739506513088952*^9}, {3.7395065619014163`*^9, 
+   3.7395066298592205`*^9}, {3.7395077862650537`*^9, 3.739507788535321*^9}, {
+   3.7395079191189003`*^9, 3.739507957859075*^9}, {3.739508002233828*^9, 
+   3.739508007871016*^9}, {3.739508038660231*^9, 3.7395080399515495`*^9}, {
+   3.7395106764843054`*^9, 3.7395106808776693`*^9}, {3.7395107472910805`*^9, 
+   3.739510749469742*^9}, {3.739512155386652*^9, 3.7395121665305166`*^9}, {
+   3.7395122078745527`*^9, 3.7395123077808304`*^9}, {3.739512354882766*^9, 
+   3.739512411240408*^9}},ExpressionUUID->"2dcef8d5-62f9-4377-9f67-\
+08bde428ec57"]
+},
+WindowSize->{759, 859},
+WindowMargins->{{Automatic, 119}, {-60, Automatic}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4792, 111, 385, "Input",ExpressionUUID->"2dcef8d5-62f9-4377-9f67-08bde428ec57"]
+}
+]
+*)
+
